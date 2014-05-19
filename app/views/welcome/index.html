@@ -1,4 +1,80 @@
-<h2>Hello World</h2>
-<p>
-  The time is now: <%= Time.now %>
-</p>
+<div>
+  <div class="container">
+    <div class="row text-center" style="margin-top: 40px;">
+      <img src="/assets/images/logo.png" style="margin: 0 auto;" />
+      <h1 class="text-center" style="margin: 0px;">RVP Your Events</h1>
+      <h4 class="text-muted">
+        wel will help you RSVP your event the right way!
+      </h4>
+    </div>
+  </div>
+</div>
+<div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12 text-center">
+
+        <!-- Sign in trigger modal -->
+        <a class="btn btn-large btn-info btn-signin" href="#" data-toggle="modal" data-target="#signinModal">
+          Sign In
+        </a>
+        <!-- Sign in Modal -->
+        <div class="modal fade" id="signinModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">Sign In</h4>
+              </div>
+              <div class="modal-body">
+                <%= render :template=>"devise/sessions/new" %>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Sign up trigger modal -->
+        <a class="btn btn-large btn-info btn-signup" href="#" data-toggle="modal" data-target="#signupModal">
+          SIgn Up
+        </a>
+        <!-- Sign up Modal -->
+        <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">Sign In</h4>
+              </div>
+              <div class="modal-body">
+                <%= render :template=>"devise/registrations/new" %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-6 col-xs-12"> Sed turpis. Phasellus a pede
+        id odio interdum elementum. Nam urna felis, sodales ut, luctus vel,
+        condimentum vitae, est. Vestibulum ut augue. Nunc laoreet sapien quis
+        neque semper dictum. Phasellus rhoncus est id turpis. Vestibulum in
+        elit at odio pellentesque volutpat. Nam nec tortor. Suspendisse
+        porttitor consequat nulla. Morbi suscipit tincidunt nisi. Sed
+        laoreet, mauris et tincidunt facilisis, est nisi pellentesque ligula,
+        sit amet convallis neque dolor at sapien. Aenean viverra justo ac
+        sem.
+
+Pellentesque at dolor non lectus sagittis semper. Donec.
+        
+      </div>
+      <div class="col-md-6 col-md-6 col-xs-12"> Vulputate ultrices. Aliquam
+      interdum varius enim. Maecenas at mauris. Sed sed nibh. Nam non turpis.
+      Maecenas fermentum nibh in est. Pellentesque habitant morbi tristique
+      senectus et netus et malesuada fames ac turpis egestas.
+
+Duis sagittis fermentum nunc. Nullam elementum erat. Quisque dapibus, augue nec
+dapibus bibendum, velit enim scelerisque sem, accumsan suscipit lectus odio ac
+justo. Fusce in felis a enim rhoncus placerat. Cras nec eros et mi egestas
+facilisis. In hendrerit tincidunt neque. Maecenas tellus. Fusce sollicitudin.
+        
+      </div>
+    </div>
+  </div>
+</div>
