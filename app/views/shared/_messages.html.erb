@@ -1,0 +1,21 @@
+<% if flash %>
+  <% if flash[:errors] %>
+    <div class="alert alert-danger">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <strong>Error!</strong> 
+      <%= (flash[:errors].is_a? Array) ? flash[:errors].to_sentence : flash[:errors] %>
+    </div>
+  <% elsif flash[:success] %>
+    <div class="alert alert-success">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <strong>Success!</strong> 
+      <%= (flash[:success].is_a? Array) ? flash[:success].to_sentence : flash[:success] %>
+    </div>
+  <% elsif flash[:warning] %>
+    <div class="alert alert-warning">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <strong>Warning!</strong> 
+      <%= (flash[:warning].is_a? Array) ? flash[:warning].to_sentence : flash[:warning] %>
+    </div>
+  <% end %>
+<% end %>

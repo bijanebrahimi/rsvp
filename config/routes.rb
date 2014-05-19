@@ -57,5 +57,7 @@ Rsvp::Application.routes.draw do
 
   # Root page
   root 'welcome#index'
+  
+  resources :events
 
 end
