@@ -46,3 +46,6 @@ end
 
 # Heroku requirement gem
 gem 'rails_12factor', group: :production
+
+# Devise: User Management
+gem 'devise'
