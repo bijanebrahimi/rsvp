@@ -5,6 +5,12 @@
       <a href="#" data-toggle="modal" data-target="#<%= dom_id(event) %>_modal">
         <h4 class="media-heading"><%= event.name %></h4>
       </a>
+      <div class="text-muted" style="width: 100%;">
+        <span class="glyphicon glyphicon-calendar"></span>
+        Created at <%= timeago_tag event.created_at %> | 
+        <span class="glyphicon glyphicon-calendar"></span>
+        Due Date in <%= timeago_tag event.due_date %>
+      </div>
       <%= event.description %>
     </div>
   </div>
