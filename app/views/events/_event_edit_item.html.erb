@@ -8,8 +8,10 @@
       <div class="text-muted" style="width: 100%;">
         <span class="glyphicon glyphicon-calendar"></span>
         Created at <%= timeago_tag event.created_at %> | 
-        <span class="glyphicon glyphicon-calendar"></span>
+        <span class="glyphicon glyphicon-time"></span>
         Due Date in <%= timeago_tag event.due_date %>
+        <span class="glyphicon glyphicon-share-alt"></span>
+        <%= link_to 'Share This', event_path(event), :method => :get, :target => "_new" %>
       </div>
       <%= event.description %>
     </div>

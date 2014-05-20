@@ -38,6 +38,10 @@ class EventsController < ApplicationController
     end
   end
   
+  def show
+  
+  end
+  
   private
     def safe_params
       params.require(:event).permit(:name, :due_date, :description)
