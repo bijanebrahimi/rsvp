@@ -49,3 +49,6 @@ gem 'rails_12factor', group: :production
 
 # Devise: User Management
 gem 'devise'
+
+# time-ago
+gem 'rails-timeago', '~> 2.0'
