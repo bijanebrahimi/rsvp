@@ -1,0 +1,2 @@
+$('#<%= dom_id(@event) %>').replaceWith("<%= escape_javascript(render 'events/event_edit_item', :event=>@event) %>")
+$('#<%= dom_id(@event) %>_form .form-group:last').html("<%= escape_javascript(render 'shared/messages', :flash=>@messages) %>")

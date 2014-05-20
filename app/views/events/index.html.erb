@@ -17,12 +17,13 @@
       </div>
     </div>
   </div>
+  <%= link_to 'Sign Out', destroy_user_session_path, :method => :delete, :class => "btn btn-large btn-block btn-danger" %>
 </div>
 <div class="col-md-9">
   <div class="">
     <div class="row events col-md-12 col-sm-12 col-xs-12">
       <% @events.each do |event| %>
-        <%= render 'events/event_item', :event=>event %>
+        <%= render 'events/event_edit', :event=>event %>
       <% end %>
     </div>
   </div>
