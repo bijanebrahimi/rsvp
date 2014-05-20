@@ -1,1 +1,1 @@
-alert("<%= escape_javascript(render 'shared/messages', :flash=>@messages) %>")
+$('form#new-event-form .form-group:last').html("<%= escape_javascript(render 'shared/messages', :flash=>@messages) %>")

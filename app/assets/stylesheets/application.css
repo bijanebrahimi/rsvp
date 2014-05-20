@@ -20,3 +20,14 @@ a.btn-signup, a.btn-signin {
   width: 50%;
   margin: 10px auto;
 }
+
+.events .media:first-child{
+  margin-top: 15px;
+}
+.events .media {
+  float: left;
+}
+.events .media:nth-child(even) {
+  float:right;
+  background:red;
+}

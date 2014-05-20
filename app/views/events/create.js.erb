@@ -1,0 +1,3 @@
+$('.events').append("<%= escape_javascript(render 'events/event_item', :event=>@event) %>")
+$('form#new-event-form')[0].reset()
+$('form#new-event-form').find('.btn[data-dismiss=modal]').click()
