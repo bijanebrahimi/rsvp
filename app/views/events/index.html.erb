@@ -1,0 +1,30 @@
+
+<%# render 'events/new' %>
+<div class="col-md-3">
+  <a class="btn btn-large btn-block btn-success" href="#" data-toggle="modal" data-target="#newEventModal">
+    New Event
+  </a>
+  <div class="modal fade" id="newEventModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title" id="myModalLabel">New Event</h4>
+        </div>
+        <div class="modal-body">
+          <%= render :template => 'events/new' %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <%= link_to 'Sign Out', destroy_user_session_path, :method => :delete, :class => "btn btn-large btn-block btn-danger" %>
+</div>
+<div class="col-md-9">
+  <div class="">
+    <div class="row events col-md-12 col-sm-12 col-xs-12">
+      <% @events.each do |event| %>
+        <%= render 'events/event_edit', :event=>event %>
+      <% end %>
+    </div>
+  </div>
+</div>

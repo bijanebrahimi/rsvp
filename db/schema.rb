@@ -11,10 +11,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140519082247) do
+ActiveRecord::Schema.define(version: 20140520164755) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "events", force: true do |t|
+    t.integer  "user_id",                      null: false
+    t.string   "name",                         null: false
+    t.datetime "due_date",                     null: false
+    t.boolean  "confirmation", default: false, null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "description"
+  end
+
+  create_table "replies", force: true do |t|
+    t.string   "email",                             null: false
+    t.integer  "status",                            null: false
+    t.string   "confirmation_code",                 null: false
+    t.boolean  "confirmed",         default: false, null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "event_id"
+  end
+
+  add_index "replies", ["confirmation_code"], name: "index_replies_on_confirmation_code", unique: true, using: :btree
+  add_index "replies", ["email"], name: "index_replies_on_email", unique: true, using: :btree
+  add_index "replies", ["event_id"], name: "index_replies_on_event_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

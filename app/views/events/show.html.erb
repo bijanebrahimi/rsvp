@@ -1,0 +1,17 @@
+<h1 class="text-center"><%= @event.name %></h1>
+<div class="text-muted text-center">
+  <span class="glyphicon glyphicon-calendar"></span>
+  Due Date in <%= timeago_tag @event.due_date %>
+</div>
+<p class="text-muted"><%= @event.description %></p>
+<p>
+  <a href="" class="btn btn-large btn-success">
+    Yes
+  </a>
+  <a href="" class="btn btn-large btn-warning">
+    Maybe
+  </a>
+  <a href="" class="btn btn-large btn-danger">
+    No
+  </a>
+</p>

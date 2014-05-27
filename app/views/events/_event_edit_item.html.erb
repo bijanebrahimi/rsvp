@@ -1,0 +1,19 @@
+<div id="<%= dom_id(event) %>" class="col-md-12 col-xs-12 col-sm-12 event">
+  <div class="media">
+    <span class="pull-left glyphicon glyphicon-list-alt" style="font-size: 35px;"></span>
+    <div class="media-body">
+      <a href="#" data-toggle="modal" data-target="#<%= dom_id(event) %>_modal">
+        <h4 class="media-heading"><%= event.name %></h4>
+      </a>
+      <div class="text-muted" style="width: 100%;">
+        <span class="glyphicon glyphicon-calendar"></span>
+        Created at <%= timeago_tag event.created_at %> | 
+        <span class="glyphicon glyphicon-time"></span>
+        Due Date in <%= timeago_tag event.due_date %>
+        <span class="glyphicon glyphicon-share-alt"></span>
+        <%= link_to 'Share This', event_path(event), :method => :get, :target => "_new" %>
+      </div>
+      <%= event.description %>
+    </div>
+  </div>
+</div>
