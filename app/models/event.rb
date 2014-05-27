@@ -1,6 +1,7 @@
 class Event < ActiveRecord::Base
   # Associations
   belongs_to :user
+  has_many :replies
   
   # Validations
   validates :name, :presence =>true
